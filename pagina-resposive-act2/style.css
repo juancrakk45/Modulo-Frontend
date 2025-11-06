@@ -1,0 +1,131 @@
+
+
+.html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 16px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #252424;
+    color: rgb(251, 251, 251);
+    text-align: center;
+    padding: 2vw;
+}
+.navbar {
+    display: flex;
+    background-color: #444444;
+    color: rgb(2, 2, 2);
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    justify-content: center;
+    padding:0.5 rem 0;
+}
+
+#lista {
+    list-style: none;
+    margin: 0; 
+    padding: 0;   
+    display: flex; 
+    justify-content: center; 
+    width: 100%;
+}
+#lista li {
+    margin: 0 15px;
+}
+#lista a {
+    text-decoration: none;
+    color: #dfdfdf;
+    display: block;
+    padding: 0.5rem 2vw;
+    background-color: #888888;
+    border-radius: 5px;
+
+}
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.proyecto {
+    background-color: #e0e0e0;
+    padding: 2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #222;
+}
+
+
+.main {
+    font-family: 'Franklin Gothic Medium';
+    padding: 2vw;
+    color: #070707;
+}
+
+.footer {
+    background-color: #252424;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer p {
+    margin: 0;
+}
+
+#hola {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;   
+}
+
+#denegado {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background: #ff0202;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+
+@media (max-width: 600px) {
+    .htmal, body {
+        font-size: 16px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+    #lista {
+        display:block;
+        text-align: center;
+    }
+    #lista li {
+        margin: 5px 0;
+        
+    }
+
+    #lista a{
+        margin: 10px 0;
+        padding: 0.2rem 0.5rem;
+        border-radius: 5px;
+
+    }
+    .main {
+        font-size: 1.2rem;
+        color: rgb(2, 3, 87);
+    }
+    
+
+}
