@@ -18,6 +18,8 @@ btn.addEventListener("click", () => {
     span.addEventListener("click", () => {
         span.classList.toggle("text-decoration-line-through");
         span.classList.toggle("text-muted");
+
+        li.classList.toggle("list-group-item-success");
     });
 
     // Botón eliminar
@@ -35,4 +37,10 @@ btn.addEventListener("click", () => {
     lista.appendChild(li);
 
     input.value = "";
+});
+
+input.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+        btn.click();
+    }
 });
