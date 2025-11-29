@@ -1,0 +1,30 @@
+.contenedor-calculadora {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.calculadora {
+  width: 320px;
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.display {
+  height: 60px;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 10px;
+  background-color: black;
+  color: lime;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: right;
+}
