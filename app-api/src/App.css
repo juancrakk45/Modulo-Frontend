@@ -1,0 +1,90 @@
+/* --- CENTRADO GLOBAL Y FONDO (SOLUCIÓN FLEXBOX) --- */
+
+body {
+    /* Eliminamos el margen y padding por defecto */
+    margin: 0; 
+    padding: 0;
+    
+    /* === ¡REGLAS DE CENTRADO AGRESIVO! === */
+    display: flex; /* Convierte el cuerpo en un contenedor flex */
+    justify-content: center; /* Centra el contenido (.app-container) horizontalmente */
+    min-height: 100vh; /* Ocupa toda la altura de la ventana */
+    
+    background-color: #222; 
+    color: white; 
+    font-family: Arial, sans-serif;
+}
+
+/* 1. CONTENEDOR PRINCIPAL */
+.app-container {
+    /* Define el ancho máximo y permite que el Flexbox lo centre */
+    max-width: 1400px;
+    width: 100%; 
+    
+    /* Centra el texto (títulos, encabezados) */
+    text-align: center; 
+    padding: 20px 0;
+}
+
+/* 2. CENTRADO DEL FORMULARIO */
+form {
+    display: flex;
+    justify-content: center; /* Centra el input y el botón */
+    
+    /* Centra el bloque <form> dentro del app-container (Aunque Flexbox ayuda, esta es la buena práctica) */
+    width: fit-content; 
+    margin: 0 auto 30px auto; 
+}
+
+/* 3. CENTRADO DE LA CUADRÍCULA */
+.song-grid {
+    max-width: 1200px; 
+    margin: 0 auto; /* Centra el bloque de la cuadrícula dentro de app-container */
+    padding: 20px;
+}
+
+
+/* --- ESTILOS PARA EL EFECTO OVERLAY (HOVER) --- */
+
+.song-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    overflow: hidden; 
+}
+
+.hover-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: rgba(0, 0, 0, 0.9); 
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    
+    opacity: 0; 
+    transform: translateY(100%); 
+    transition: opacity 0.4s ease, transform 0.4s ease; 
+    text-align: center;
+    pointer-events: none; 
+}
+
+.song-card:hover .hover-info {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+.song-card:hover img {
+    opacity: 0.2; 
+    transition: opacity 0.4s ease;
+}
+
+.hover-info p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
